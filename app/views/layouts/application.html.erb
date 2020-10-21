@@ -1,90 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-
-
-    <style media="screen">
-      .contacts img {
-        margin-right: 10px;
-      }
-
-      .menu {
-        margin-right: 10px;
-      }
-    </style>
-
-    <title>ZeoBlocks</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-<a href="#" align='center'><%= link_to image_tag("logo.png"), home_path %></a>
-</div>
-
-  <!--  <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light">
-          <div class="topnav-centered">
-            <ul class="navbar-nav">
-              <li class="menu">
-              <%= link_to image_tag("home.png"), home_path %>
-              </li>
-              <li class="menu">
-                <a class="nav-link" href="#"><%= link_to image_tag("info-button.png"), about_path %></a>
-              </li>
-              <li class="menu">
-                <a class="nav-link" href="#"><%= link_to image_tag("tools.png"), new_post_path %></a>
-              </li>
-            </ul>
-          </div>
-        </nav> -->
-
-
-        <nav class="navbar justify-content-center ">
-          <p class="contacts">
-          <a href="https://www.facebook.com/zabozhane/"><%= image_tag("facebook.png")%></a>
-          <a href="https://www.facebook.com/zabozhane/"><%= image_tag("instagram.png")%></a>
-          <a href="#"><%= image_tag("linkedin.png") %></a>
-          <a href="https://github.com/evgzabozhan"><%= image_tag("github.png") %></a>
-          <a href="https://twitter.com/evgzabozhan"><%= image_tag("twitter.png") %></a>
-          <a href="https://twitter.com/evgzabozhan"><%= image_tag("youtube.png") %></a>
-          <a href="https://stackoverflow.com/users/14467623/evgzabozhan"><%= image_tag("stackoverflow.png") %></a>
-          <a href="https://t.me/zeoBlocks"><%= image_tag("telegram.png") %></a>
-          <a href="mailto:evgzabozhan@gmail.com"><%= image_tag("mail.png") %></a>
-          </p>
-        </nav>
-
-<!-- <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead mb-auto">
-      <a href="#" align='center'><%= link_to image_tag("logo.png"), home_path %></a>
-    <div class="inner">
-      <nav class="nav nav-masthead justify-content-center">
-        <p class="menu">
-        <a href="#"><%= link_to "Home", home_path %></a>
-        <a href="#"><%= link_to "About", about_path %></a>
-        <a href="#"><%= link_to "Create", new_post_path %></a>
-        </p>
+   <head>
+      <style media="screen">
+         .contacts img {
+         margin-right: 10px;
+         }
+         .menu {
+         margin-right: 10px;
+         }
+      </style>
+      <title>ZeoBlocks</title>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %>
+      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+   </head>
+   <body>
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+         <a href="#" align='center'><%= link_to image_tag("logo.png"), home_path %></a>
+      </div>
+      <nav class="navbar justify-content-center ">
+         <p class="contacts">
+            <a href="https://www.facebook.com/zabozhane/"><%= image_tag("facebook.png")%></a>
+            <a href="https://www.facebook.com/zabozhane/"><%= image_tag("instagram.png")%></a>
+            <a href="#"><%= image_tag("linkedin.png") %></a>
+            <a href="https://github.com/evgzabozhan"><%= image_tag("github.png") %></a>
+            <a href="https://twitter.com/evgzabozhan"><%= image_tag("twitter.png") %></a>
+            <a href="https://twitter.com/evgzabozhan"><%= image_tag("youtube.png") %></a>
+            <a href="https://stackoverflow.com/users/14467623/evgzabozhan"><%= image_tag("stackoverflow.png") %></a>
+            <a href="https://t.me/zeoBlocks"><%= image_tag("telegram.png") %></a>
+            <a href="mailto:evgzabozhan@gmail.com"><%= image_tag("mail.png") %></a>
+         </p>
       </nav>
-      <nav class="nav nav-masthead justify-content-center">
-        <p class="contacts">
-        <a href="https://www.facebook.com/zabozhane/"><%= image_tag("facebook.png")%></a>
-        <a href="#"><%= image_tag("linkedin.png") %></a>
-        <a href="https://github.com/evgzabozhan"><%= image_tag("github.png") %></a>
-        <a href="https://twitter.com/evgzabozhan"><%= image_tag("twitter.png") %></a>
-        <a href="https://stackoverflow.com/users/14467623/evgzabozhan"><%= image_tag("stackoverflow.png") %></a>
-        <a href="https://t.me/zeoBlocks"><%= image_tag("telegram.png") %></a>
-        <a href="mailto:evgzabozhan@gmail.com"><%= image_tag("mail.png") %></a>
-        </p>
-      </nav>
-    </div> -->
-
-
-<div class="container">
-   <%= yield %>
-</div>
-
-  </body>
+      <div class="container">
+         <%= yield %>
+      </div>
+   </body>
 </html>
