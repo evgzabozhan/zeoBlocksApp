@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+
+.text {
+	margin : auto;
+	text-align : center;
+	width : 60%;
+}
+
+</style>
+</head>
+<body>
+
+<h2 class="text"><%= @post.title %></h2>
+<br>
+<p class="text"><%= @post.body %></p>
+<hr>
+<p align='center'>
+<%= link_to "Edit", edit_post_path(@post), :class =>
+    'btn btn-default' %>
+<%= link_to "Delete", post_path(@post),
+                method: :delete,
+                data:{confirm: 'Are you sure?'},
+                :class => 'btn btn-danger' %>
+</p>
