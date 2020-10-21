@@ -1,34 +1,41 @@
-<h1>Blog Posts</h1>
 <html>
-<head>
-<style>
-h1 {text-align: center;}
-div {text-align: center;}
+	<head>
+		<style>
+			h1 {text-align: center;}
+			div {text-align: center;}
 
-.text {
-	margin : auto;
-	text-align : center;
-	width : 60%;
-}
+			.text {
+				margin : auto;
+				text-align : left;
+				width : 60%;
+			}
 
-.btn {
-	background-color: white;
- color: black;
- border: 2px solid #e7e7e7; /* Green */
-}
+			.btn {
+				background-color: white;
+				color: black;
+				border: 2px solid #e7e7e7; /* Green */
+			}
 
-</style>
-</head>
+		</style>
+	</head>
 <body>
-<br>
-<% @posts.each do |post| %>
-	<div class="well">
-	 	<h3 class ="text" align='center'><%= post.title %></h3>
-		<br>
-	 	<p class="text"> <%= post.description %></p>
-		<br>
-	 	<button class="btn"><%= link_to "Read More", post_path(post) %></button>
-	 </div>
-	 <br>
-	 <br>
+	<br>
+	<% @posts.each do |post| %>
+		<div class="well">
+	 		<h3 class ="text" align='left'><%= post.title %></h3>
+			<br>
+			<p class="text" style="color:gray">
+				<a><%= post.created_at.strftime("%d %B %Y")%></a>
+				<a href="<%= url_for(post) + "#disqus_thread"%>"></a>
+			</p>
+			<script id="dsq-count-scr" src="//zeoblocks-com.disqus.com/count.js" async></script>
+			<br>
+	 		<p class="text"> <%= post.description %></p>
+			<br>
+			<a class = "text" href="#"><%= link_to "Read More", post_path(post) %></a>
+	 	<!-- <button class="btn"><%= link_to "Read More", post_path(post) %></button> -->
+	 	</div>
+	<br>
 <% end %>
+</body>
+</html>
