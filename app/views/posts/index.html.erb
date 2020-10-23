@@ -1,37 +1,20 @@
 <html>
-   <head>
-      <style>
-         h1 {text-align: center;}
-         div {text-align: center;}
-         .text {
-         margin : auto;
-         text-align : left;
-         width : 60%;
-         }
-
-         .btn {
-         background-color: white;
-         color: black;
-         border: 2px solid #e7e7e7;
-         }
-      </style>
-   </head>
-   <body>
+  <body>
      <br>
       <% @posts.each do |post| %>
       <div>
-        <h3 class ="text" align='left'><%= post.title %></h3>
+        <h3 class ="link" align='left'><%= link_to post.title,post_path(post), class: "link" %></h3>
         <br>
-        <p class="text" style="color:gray">
+        <p class="indextext" style="color:gray">
             <a><%= post.created_at.strftime("%d %B %Y")%></a>
-            <a href="<%= url_for(post) + "#disqus_thread"%>"></a>
+            <a style = "color:gray" href="<%= url_for(post) + "#disqus_thread" %>"></a>
         </p>
         <script id="dsq-count-scr" src="//zeoblocks-com.disqus.com/count.js" async></script>
         <br>
-        <p class="text"> <%= post.description %>
+        <p class="indextext"> <%= post.description %>
           <br>
           <br>
-          <a class = "text" href="#"><%= link_to "Read More", post_path(post) %></a>
+          <a class = "indextext" href="#"><%= link_to "Read More", post_path(post) %></a>
         </p>
         <br>
       </div>
